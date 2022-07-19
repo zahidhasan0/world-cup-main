@@ -94,7 +94,9 @@ body {
 }
 
 
-#blog-nav {
+
+#blog-nav,
+#upcomig-match {
     background-color: red;
     color: white;
 }
@@ -143,6 +145,28 @@ body {
     color: gray;
 }
 
+/* Upcoming Section Styles  */
+.match {
+    height: 182px;
+    width: 252px;
+    padding: 30px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.flag {
+    display: flex;
+    column-gap: 20px;
+
+}
+
+.match-time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Footers Styles */
 .footer {
     height: 444px;
@@ -176,4 +200,22 @@ body {
     color: gray;
     margin-right: 50px;
     font-size: 16px;
+}
+
+/* media query */
+@media only screen and(max-width:576px) {
+    .header {
+        width: 100%;
+    }
+
+    .middle-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigation {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
