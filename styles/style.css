@@ -12,7 +12,8 @@ body {
     height: 646px;
     width: 1321px;
     color: white;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin: auto;
     margin-top: 50px;
     border-radius: 20px;
@@ -51,7 +52,7 @@ body {
 }
 
 .header-img img {
-    width: 581px;
+    width: 100%;
     height: 645px;
     position: relative;
     bottom: 0;
@@ -114,7 +115,9 @@ body {
     width: 312px;
     height: 362px;
     border-radius: 10px;
+    box-shadow: 10px 10px 8px #888888;
     padding-bottom: 30px;
+
 }
 
 
@@ -140,7 +143,7 @@ body {
 
 .icons span {
     font-size: 16px;
-    margin-right: 100px;
+    margin-right: 80px;
     margin-left: 10px;
     color: gray;
 }
@@ -152,6 +155,7 @@ body {
     padding: 30px;
     border: 1px solid lightgray;
     border-radius: 10px;
+    box-shadow: 10px 10px 8px #888888;
 }
 
 .flag {
@@ -170,12 +174,14 @@ body {
 /* Footers Styles */
 .footer {
     height: 444px;
+    width: 100%;
     margin-top: 100px;
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .footer h2 {
@@ -202,20 +208,194 @@ body {
     font-size: 16px;
 }
 
-/* media query */
-@media only screen and(max-width:576px) {
+/* media query for mobile device*/
+
+@media screen and (max-width: 576px) {
     .header {
+
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        height: 520px;
+
+        margin: 0%;
+        border-radius: 10px;
+        padding: 0px;
+
+    }
+
+    .header-text h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+    }
+
+    .header-text p {
+        font-size: 14px;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .header-text a {
+        font-size: 1em;
+        padding: 10px;
+        margin-top: -30px;
+    }
+
+    .header-img img {
+        height: 245px;
+        width: 75%;
+        position: relative;
+        left: 60px;
+        margin-top: 50px;
+    }
+
+    /* middle section  */
+    .middle-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin: 0px;
+        padding-top: 30px;
+
+    }
+
+    .navigation {
+        margin-bottom: 30px;
+        width: 100%;
+        padding: 0px;
+        background-color: white;
+
+    }
+
+    .navigation a {
+        border: 1px solid black;
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .article-section {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+
+    }
+
+    .blog {
+        width: 100%;
+    }
+
+    .blog img {
+        width: 100%;
+    }
+
+    .match {
+        width: 82%;
+    }
+
+    .flag {
+        justify-content: center;
+    }
+
+    .footer {}
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu a {
+        margin-top: 20px;
+    }
+
+}
+
+/* media query for tablet device */
+@media only screen and (min-width:577px) and (max-width:991px) {
+
+    .header {
+        width: 100%;
+        height: 375px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .header-text p {
+        font-style: 15px;
+        margin-bottom: 60px;
+    }
+
+    .header-text a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        background-color: red;
+        padding: 10px 30px;
+        border-radius: 10px;
+    }
+
+    .header-img img {
+        height: 350px;
         width: 100%;
     }
 
     .middle-section {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin: 0px;
+        padding-top: 30px;
     }
 
     .navigation {
+        display: flex;
+        flex-direction: row;
         width: 100%;
-        grid-template-columns: repeat(1, 1fr);
+        background-color: white;
+        justify-content: space-around;
+        height: auto;
     }
 
+    .navigation a {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px 20px;
+        font-weight: 600;
+
+
+    }
+
+    .article-section {
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        justify-items: center;
+    }
+
+    #hidden-blog {
+        display: none;
+    }
+
+
+    .footer {
+
+        width: 100%;
+    }
+
+    .footer-menu {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+}
+
+/* media query for pc  */
+@media only screen (min-with:992px) and (max-width:1400px) {
+    .footer {
+        width: 100%;
+    }
 }
