@@ -6,6 +6,38 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* aimation add  */
+@keyframes header-animation {
+    0% {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+    }
+
+    50% {
+        background-color: red;
+        color: white;
+        font-size: 15px;
+    }
+
+    100% {
+        background-color: white;
+        color: red;
+    }
+}
+
+.header-text a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    background-color: red;
+    padding: 10px 30px;
+    border-radius: 10px;
+    animation: header-animation 1s ease-out none infinite alternate;
+    animation-play-state: running;
+
+}
+
 /* header section styles */
 .header {
     background-color: #161616;
@@ -38,13 +70,16 @@ body {
     margin-bottom: 60px;
 }
 
-.header-text a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    background-color: red;
-    padding: 10px 30px;
-    border-radius: 10px;
+
+
+.header-text a:hover {}
+
+
+
+.header-button {
+    color: red;
+    background-color: white;
+
 }
 
 .fa-right-long {
@@ -96,6 +131,8 @@ body {
 
 
 
+
+
 #blog-nav,
 #upcomig-match {
     background-color: red;
@@ -117,6 +154,7 @@ body {
     border-radius: 10px;
     box-shadow: 10px 10px 8px #888888;
     padding-bottom: 30px;
+    background-color: lightgray;
 
 }
 
