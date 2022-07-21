@@ -148,6 +148,25 @@ body {
     color: gray;
 }
 
+.button {
+    display: none;
+    background-color: red;
+    color: black;
+    padding: 5px 15px;
+    height: 30px;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+.button button {
+    color: red;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
 /* Upcoming Section Styles  */
 .match {
     height: 182px;
@@ -285,10 +304,28 @@ body {
 
     .blog {
         width: 100%;
+        height: auto;
     }
 
     .blog img {
         width: 100%;
+    }
+
+
+
+    .button {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 93%;
+        margin-top: 30px;
+    }
+
+
+
+
+    #hidden-blog {
+        display: none;
     }
 
     .match {
@@ -376,6 +413,19 @@ body {
         grid-gap: 30px;
         justify-items: center;
     }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 93%;
+        margin-top: 30px;
+    }
+
+
+
+
+
 
     #hidden-blog {
         display: none;
